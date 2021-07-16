@@ -25,12 +25,11 @@ const app = next({
 const handle = app.getRequestHandler();
 
 Shopify.Context.initialize({
-  API_KEY: process.env.SHOPIFY_API_KEY,
-  API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
-  SCOPES: process.env.SCOPES
-    ? process.env.SCOPES.split(",")
-    : "write_products,write_customers,write_draft_orders,read_themes",
-  HOST_NAME: process.env.HOST.replace(/https:\/\//, ""),
+  API_KEY: "3feaa822ea9422356b8b0e457ad57477",
+  API_SECRET_KEY: "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",
+  SCOPES: ["write_products",
+  "write_customers","write_draft_orders","read_themes"],
+  HOST_NAME: "https://reviewappmine.herokuapp.com".replace(/https:\/\//, ""),
   API_VERSION: ApiVersion.October20,
   IS_EMBEDDED_APP: true,
   // This should be replaced with your preferred storage strategy
